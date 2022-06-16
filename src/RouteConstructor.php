@@ -78,7 +78,7 @@ class RouteConstructor
     private function getRoute(string $route): string
     {
         $prefix = false;
-        if (str_contains($route, 'PluginConfiguration::PLUGIN_NAME') || @str_contains($route, $this->namespace)) {
+        if (str_contains($route, '::')) {
             $prefix = true;
         }
         $byApostrophe = explode("'", $route)[1];
